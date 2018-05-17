@@ -4,7 +4,7 @@
   "description": "Standalone build/dev pipeline for Vue.js with Electron",
   "author": "Andrew Wei <andrewscwei@gmail.com>",
   "private": true,
-  "license": "NOLICENSE",
+  "license": "MIT",
   "bin": {
     "electron-vue-builder": "./index.js",
     "evb": "./index.js"
