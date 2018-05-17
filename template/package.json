@@ -1,0 +1,53 @@
+{
+  "version": "0.1.0",
+  "name": "{{ slugify name }}",
+  "description": "{{ description }}",
+  "main": "./dist/electron/main.js",
+  "author": "{{ author }}",
+  "repository": "{{ repository }}",
+  "private": true,
+  "license": "NOLICENSE",
+  "scripts": {
+    "clean": "evb clean",
+    "build": "evb build",
+    "build:mac": "evb build -m",
+    "build:win": "evb build -w",
+    "publish:mac": "evb build -m -p",
+    "publish:win": "evb build -w -p",
+    "dev": "evb dev",
+    "lint": "evb lint",
+    "lint:fix": "evb lint -f",
+    "upgrade": "evb upgrade",
+    "patch": "evb patch"
+  },
+  "build": {
+    "appId": "{{ slugify name }}",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "dist/electron",
+      "node_modules/",
+      "package.json"
+    ],
+    "publish": [{
+      "provider": "generic",
+      "url": "https://{{ slugify name }}-nuts.herokuapp.com/download/latest"
+    }, {
+      "provider": "github",
+      "private": true
+    }],
+    "mac": {
+      "target": "zip",
+      "icon": "build/icons/icon.icns"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icons/icon.ico",
+      "verifyUpdateCodeSignature": false
+    }
+  },
+  "devDependencies": {
+    "electron-vue-builder": "git+ssh://git@github.com/andrewscwei/electron-vue-builder.git#v1.0.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "globals": {
+    "$routes": true,
+    "$locales": true,
+    "$config": true
+  }
+}
