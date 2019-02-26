@@ -37,7 +37,3 @@ Follow these steps to quickly set up a project built with `electron-vue-builder`
         4. `WIN_CSC_LINK`: Windows code sign certificate `base64` string
         5. `WIN_CSC_KEY_PASSWORD`: Password to unlock `WIN_CSC_LINK`
 3. Trigger rebuild on CircleCI (your first build probably failed). Once complete, your app create a drafted release in its repo. Note that it is still a draft. Edit it to make it an official release.
-
-## License
-
-This software is released under the [MIT License](http://opensource.org/licenses/MIT).
